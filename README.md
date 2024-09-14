@@ -47,7 +47,7 @@ Reference guide [Install or update to the latest version of the AWS CLI](https:/
 aws configure
 
 AWS access key id:
-AWS secret access key:
+AWS secret access key: put your access key here
 Default region name: us-east-1 
 Default output format: JSON 
 ```
