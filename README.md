@@ -36,7 +36,6 @@ git clone https://github.com/jonasfschuh/aws-cdk.git
 
 Reference guide [Install or update to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-
 ## Usage
 
 1. Start the application with Maven
