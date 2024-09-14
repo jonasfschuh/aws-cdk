@@ -39,9 +39,7 @@ git clone https://github.com/jonasfschuh/aws-cdk.git
 ## Usage
 
 1. Start the application with Maven
-2. The API will be accessible at http://localhost:8080/swagger-ui/index.html
-3. The H2 Database will be accessible at http://localhost:8080/h2-console
-   with H2 Database credentials: user: admin password:
+2. Step two 
 
 ## Configuration 
 
