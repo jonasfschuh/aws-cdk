@@ -16,7 +16,7 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 - Java 17
 - Amazon ECS with Fargate 
 - Target Blue concept
-- Load balancer
+- Load Balanced Fargate Service
 - Auto Scaling Group
 
 ## Table of Contents
