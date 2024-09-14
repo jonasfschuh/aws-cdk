@@ -36,7 +36,6 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 git clone https://github.com/jonasfschuh/aws-cdk.git
 ```
 
-
 2. Install 
 
 ## Local-usage
