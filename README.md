@@ -52,8 +52,13 @@ Default region name: us-east-1
 Default output format: JSON
 ```
 
+To install aws-cdk
 ```bash
 npm install -g aws-cdk
+```
+
+To check cdk version 
+```bash 
 cdk --version - 2.158.0 (build 4b8714d) 
 ```
 
