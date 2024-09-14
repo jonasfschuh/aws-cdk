@@ -103,9 +103,9 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## Screenshots
 
+Cloud Formation Console 
+![CloudFormation](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/cloudformation.gif?raw=true&sanitize=true)
 
-
-
-
-
+AWS CDK Terminal Console
+![AWS CDK Terminal Console](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/aws-cdk_terminal_log.gif?raw=true&sanitize=true)
 
