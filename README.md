@@ -7,9 +7,8 @@
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 
-This is project for CDK development with Java.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This is project uses the AWS Cloud Development Kit (CDK) to accelerates cloud development 
+by using Java to model your applications.
 
 It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
 
@@ -21,12 +20,17 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 
 ## Table of Contents
 
+- [Diagram](#diagram)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Useful commands](#useful-commands)
 - [Usage](#usage)
-- [Diagram](#diagram)
 - [Screenshots](#screenshots)
+
+## Diagram
+
+Architecture diagram
+![](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/AWS%20CDK_v2.png?raw=true&sanitize=true)
 
 ## Installation
 
@@ -84,6 +88,8 @@ cdk init app --language java
 
 ## Useful commands
 
+The `cdk.json` file tells the CDK Toolkit how to execute your app.
+
 * `mvn package`     compile and run tests
 * `cdk ls`          list all stacks in the app
 * `cdk synth`       emits the synthesized CloudFormation template
@@ -92,10 +98,7 @@ cdk init app --language java
 * `cdk docs`        open CDK documentation
 
 
-## Diagram
 
-Architecture diagram
-![](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/AWS%20CDK_v2.png?raw=true&sanitize=true)
 
 
 ## Screenshots
