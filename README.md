@@ -50,13 +50,19 @@ AWS access key id:
 AWS secret access key:
 Default region name: us-east-1
 Default output format: JSON
+```
 
+```bash
 npm install -g aws-cdk
 cdk --version - 2.158.0 (build 4b8714d) 
+```
 
+```bash
 npm --version 
 10.8.3
+```
 
+```bash
 aws --version
 aws-cli/2.17.51 Python/3.11.9 Windows/10 exe/AMD64
 ```
