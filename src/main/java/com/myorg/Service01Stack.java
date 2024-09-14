@@ -14,7 +14,7 @@ import software.constructs.Construct;
 
 public class Service01Stack extends Stack {
     public Service01Stack(final Construct scope, final String id, Cluster cluster) {
-        this(scope, id, null, clusterStack);
+        this(scope, id, null, cluster);
     }
 
     public Service01Stack(final Construct scope, final String id, final StackProps props, Cluster cluster) {
