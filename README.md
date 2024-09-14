@@ -7,7 +7,6 @@
 
 
 
-
 This is project for CDK development with Java.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
@@ -17,7 +16,6 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 
 - Java 17
 - Amazon ECS with Fargate 
-
 
 ## Table of Contents
 
