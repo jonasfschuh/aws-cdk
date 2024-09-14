@@ -88,8 +88,6 @@ Architecture diagram
 
 ## Screenshots
 
-<hr>
-
 
 
 
