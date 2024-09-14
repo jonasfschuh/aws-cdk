@@ -34,7 +34,11 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 git clone https://github.com/jonasfschuh/aws-cdk.git
 ```
 
-2. Install 
+2. Install
+3. 
+
+Reference guide [Install or update to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
 
 ## Usage
 
@@ -56,7 +60,6 @@ cdk --version - 2.158.0 (build 4b8714d)
 
 npm --version 
 10.8.3
-
 
 aws --version
 aws-cli/2.17.51 Python/3.11.9 Windows/10 exe/AMD64
