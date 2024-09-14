@@ -33,7 +33,6 @@ git clone https://github.com/jonasfschuh/aws-cdk.git
 ```
 
 2. Install according to the [official documentation](https://docs.aws.amazon.com/cdk/latest/guide/work-with-cdk-java.html)
- 
 
 Reference guide [Install or update to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
