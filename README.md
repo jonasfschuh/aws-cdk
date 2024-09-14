@@ -72,7 +72,6 @@ Init project
 cdk init app --language java
 ``` 
 
-
 ## Useful commands
 
 * `mvn package`     compile and run tests
