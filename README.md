@@ -6,7 +6,6 @@
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 
-
 This is project for CDK development with Java.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
