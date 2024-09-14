@@ -57,6 +57,7 @@ npm install -g aws-cdk
 cdk --version - 2.158.0 (build 4b8714d) 
 ```
 
+To check NodeJS version 
 ```bash
 npm --version 
 10.8.3
