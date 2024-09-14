@@ -38,7 +38,7 @@ git clone https://github.com/jonasfschuh/aws-cdk.git
 
 2. Install 
 
-## Local-usage
+## Usage
 
 1. Start the application with Maven
 2. The API will be accessible at http://localhost:8080/swagger-ui/index.html
