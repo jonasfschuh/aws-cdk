@@ -13,7 +13,7 @@ public class RdsStack extends Stack {
     public RdsStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
 
-        CfnParameter databasePassword = CfnParameter.Builder.create(this, "DatabasePassword")
+        CfnParameter databasePassword = CfnParameter.Builder.create(this, "databasePassword")
                 .type("String")
                 .description("The password for the database")
                 .build();
