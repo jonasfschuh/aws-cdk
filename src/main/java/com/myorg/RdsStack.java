@@ -26,7 +26,7 @@ public class RdsStack extends Stack {
         ISecurityGroup iSecurityGroup = SecurityGroup.fromSecurityGroupId(this, id, vpc.getVpcDefaultSecurityGroup());
         iSecurityGroup.addIngressRule(Peer.anyIpv4(), Port.tcp(3306));
 
-        DatabaseInstance.Builder databaseInstance = DatabaseInstance.Builder
+        DatabaseInstance databaseInstance = DatabaseInstance.Builder
                 .create(this, "Rds01")
                 .instanceIdentifier("aws_restful-db")
                 .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder()
@@ -44,6 +44,6 @@ public class RdsStack extends Stack {
                 .vpcSubnets(SubnetSelection.builder()
                         .subnets(vpc.getPrivateSubnets())
                         .build())
-                .build());
+                .build();
     }
 }
