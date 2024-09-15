@@ -114,3 +114,9 @@ AWS_RESTFUL running on AWS server
 
 Docker Hub Images Generated
 ![Docker Hub Images Generated](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/docker_hub.gif?raw=true&sanitize=true)
+
+AWS Load Balancers
+![AWS Load Balancers](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/aws_loadbalancers.gif?raw=true&sanitize=true)
+
+AWS Load Balancers Detail
+![AWS Load Balancers Detail](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/aws_loadbalancers_detail.gif?raw=true&sanitize=true)
