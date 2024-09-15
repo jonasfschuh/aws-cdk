@@ -46,11 +46,13 @@ public class RdsStack extends Stack {
         CfnOutput.Builder.create(this, "rds-endpoint")
                 .description("The endpoint of the RDS instance")
                 .value(databaseInstance.getDbInstanceEndpointAddress())
+                .exportName("rds-endpoint")
                 .build();
 
         CfnOutput.Builder.create(this, "rds-password")
                 .description("The password of the RDS instance")
                 .value(databasePassword.getValueAsString())
+                .exportName("rds-password")
                 .build();
     }
 }
