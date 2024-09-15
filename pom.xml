@@ -63,6 +63,12 @@
         </dependency>
 
         <dependency>
+            <groupId>software.amazon.awscdk</groupId>
+            <artifactId>rds</artifactId>
+            <version>0.36.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>software.constructs</groupId>
             <artifactId>constructs</artifactId>
             <version>${constructs.version}</version>
