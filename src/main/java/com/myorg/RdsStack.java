@@ -1,9 +1,6 @@
 package com.myorg;
 
-import software.amazon.awscdk.CfnParameter;
-import software.amazon.awscdk.SecretValue;
-import software.amazon.awscdk.Stack;
-import software.amazon.awscdk.StackProps;
+import software.amazon.awscdk.*;
 import software.amazon.awscdk.services.ec2.*;
 import software.amazon.awscdk.services.ec2.InstanceType;
 import software.amazon.awscdk.services.rds.*;
@@ -44,6 +41,11 @@ public class RdsStack extends Stack {
                 .vpcSubnets(SubnetSelection.builder()
                         .subnets(vpc.getPrivateSubnets())
                         .build())
+                .build();
+
+        CfnOutput.Builder.create(this, "rds-endpoint")
+                .description("The endpoint of the RDS instance")
+                .value(databaseInstance.getDbInstanceEndpointAddress())
                 .build();
     }
 }
