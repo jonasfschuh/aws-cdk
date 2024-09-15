@@ -1,10 +1,9 @@
 package com.myorg;
 
+import software.amazon.awscdk.CfnParameter;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
 import software.constructs.Construct;
-// import software.amazon.awscdk.Duration;
-// import software.amazon.awscdk.services.sqs.Queue;
 
 public class RdsStack extends Stack {
     public RdsStack(final Construct scope, final String id) {
@@ -14,7 +13,10 @@ public class RdsStack extends Stack {
     public RdsStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
 
-        // The code that defines your stack goes here
+        CfnParameter databasePassword = CfnParameter.Builder.create(this, "DatabasePassword")
+                .type("String")
+                .description("The password for the database")
+                .build();
 
     }
 }
