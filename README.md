@@ -111,3 +111,6 @@ AWS CDK Terminal Console
 
 AWS_RESTFUL running on AWS server
 ![AWS_RESTFUL running on AWS server](https://github.com/jonasfschuh/aws-cdk/blob/main/docs/img/aws_restful%20running%20on%20AWS%20server.gif?raw=true&sanitize=true)
+
+Docker Hub Images Generated
+![Docker Hub Images Generated](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/docker_hub.gif?raw=true&sanitize=true)
