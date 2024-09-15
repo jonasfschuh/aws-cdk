@@ -25,16 +25,16 @@ public class RdsStack extends Stack {
 
         DatabaseInstance databaseInstance = DatabaseInstance.Builder
                 .create(this, "Rds01")
-                .instanceIdentifier("aws_restful-db")
+                .instanceIdentifier("aws-restful-db")
                 .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder()
-                        .version(MysqlEngineVersion.VER_8_0_19)
+                        .version(MysqlEngineVersion.VER_8_0_32)
                         .build()))
                 .vpc(vpc)
                 .credentials(Credentials.fromUsername("admin",
                         CredentialsFromUsernameOptions.builder()
                         .password(SecretValue.plainText(databasePassword.getValueAsString()))
                         .build()))
-                .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+                .instanceType(InstanceType.of(InstanceClass.T3, InstanceSize.MICRO))
                 .multiAz(false)
                 .allocatedStorage(10)
                 .securityGroups(Collections.singletonList(iSecurityGroup))
