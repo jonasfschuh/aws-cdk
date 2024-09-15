@@ -14,7 +14,7 @@ public class RdsStack extends Stack {
     public RdsStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
 
-
+        // The code that defines your stack goes here
 
     }
 }
