@@ -45,6 +45,7 @@ public class Service01Stack extends Stack {
                                                 .build())
                                         .streamPrefix("Service01")
                                         .build()))
+                                .environment(envVariables)
                                 .build())
                 .publicLoadBalancer(true)
                 .build();
