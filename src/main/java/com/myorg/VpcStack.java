@@ -1,12 +1,11 @@
 package com.myorg;
 
+import software.constructs.Construct;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
 import software.amazon.awscdk.services.ec2.Vpc;
-import software.constructs.Construct;
 
 public class VpcStack extends Stack {
-
     private Vpc vpc;
 
     public VpcStack(final Construct scope, final String id) {
@@ -24,5 +23,4 @@ public class VpcStack extends Stack {
     public Vpc getVpc() {
         return vpc;
     }
-
 }
