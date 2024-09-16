@@ -27,8 +27,8 @@ public class RdsStack extends Stack {
         DatabaseInstance databaseInstance = DatabaseInstance.Builder
                 .create(this, "Rds01")
                 .instanceIdentifier("aws-restful-db")
-                .engine(DatabaseInstanceEngine.mariaDb(MariaDbInstanceEngineProps.builder()
-                        .version(MariaDbEngineVersion.VER_10_11_8)
+                .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder()
+                        .version(MysqlEngineVersion.VER_5_7)
                         .build()))
                 .vpc(vpc)
                 .credentials(Credentials.fromUsername("admin",
