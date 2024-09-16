@@ -1,10 +1,10 @@
 package com.myorg;
 
 import software.amazon.awscdk.*;
-import software.amazon.awscdk.services.ec2.*;
 import software.amazon.awscdk.services.ec2.InstanceType;
-import software.amazon.awscdk.services.rds.*;
 import software.constructs.Construct;
+import software.amazon.awscdk.services.ec2.*;
+import software.amazon.awscdk.services.rds.*;
 
 import java.util.Collections;
 
@@ -18,25 +18,26 @@ public class RdsStack extends Stack {
 
         CfnParameter databasePassword = CfnParameter.Builder.create(this, "databasePassword")
                 .type("String")
-                .description("The password for the database")
+                .description("The RDS instance password")
                 .build();
+
         ISecurityGroup iSecurityGroup = SecurityGroup.fromSecurityGroupId(this, id, vpc.getVpcDefaultSecurityGroup());
         iSecurityGroup.addIngressRule(Peer.anyIpv4(), Port.tcp(3306));
 
         DatabaseInstance databaseInstance = DatabaseInstance.Builder
                 .create(this, "Rds01")
                 .instanceIdentifier("aws-restful-db")
-                .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder()
-                        .version(MysqlEngineVersion.VER_8_0_32)
+                .engine(DatabaseInstanceEngine.mariaDb(MariaDbInstanceEngineProps.builder()
+                        .version(MariaDbEngineVersion.VER_10_11_8)
                         .build()))
                 .vpc(vpc)
                 .credentials(Credentials.fromUsername("admin",
                         CredentialsFromUsernameOptions.builder()
-                        .password(SecretValue.plainText(databasePassword.getValueAsString()))
-                        .build()))
+                                .password(SecretValue.unsafePlainText(databasePassword.getValueAsString()))
+                                .build()))
                 .instanceType(InstanceType.of(InstanceClass.T3, InstanceSize.MICRO))
                 .multiAz(false)
-                .allocatedStorage(10)
+                .allocatedStorage(20)
                 .securityGroups(Collections.singletonList(iSecurityGroup))
                 .vpcSubnets(SubnetSelection.builder()
                         .subnets(vpc.getPrivateSubnets())
@@ -44,15 +45,14 @@ public class RdsStack extends Stack {
                 .build();
 
         CfnOutput.Builder.create(this, "rds-endpoint")
-                .description("The endpoint of the RDS instance")
-                .value(databaseInstance.getDbInstanceEndpointAddress())
                 .exportName("rds-endpoint")
+                .value(databaseInstance.getDbInstanceEndpointAddress())
                 .build();
 
         CfnOutput.Builder.create(this, "rds-password")
-                .description("The password of the RDS instance")
-                .value(databasePassword.getValueAsString())
                 .exportName("rds-password")
+                .value(databasePassword.getValueAsString())
                 .build();
+
     }
 }
