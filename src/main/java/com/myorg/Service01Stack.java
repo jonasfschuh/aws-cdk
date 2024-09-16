@@ -22,7 +22,7 @@ public class Service01Stack extends Stack {
 
         Map<String, String> envVariables = new HashMap<>();
         envVariables.put("SPRING_DATASOURCE_URL", "jdbc:mariadb://" + Fn.importValue("rds-endpoint") +
-                ":3306/aws_restful?createDatabaseIfNotExist=true");
+                ":3306/aws-restful-db?createDatabaseIfNotExist=true");
         envVariables.put("SPRING_DATASOURCE_USERNAME", "admin");
         envVariables.put("SPRING_DATASOURCE_PASSWORD", Fn.importValue("rds-password"));
 
@@ -36,7 +36,7 @@ public class Service01Stack extends Stack {
                 .taskImageOptions(
                         ApplicationLoadBalancedTaskImageOptions.builder()
                                 .containerName("aws_restful")
-                                .image(ContainerImage.fromRegistry("jonasschuh/aws_restful:1.0.3"))
+                                .image(ContainerImage.fromRegistry("jonasschuh/aws_restful:1.0.5"))
                                 .containerPort(8080)
                                 .logDriver(LogDriver.awsLogs(AwsLogDriverProps.builder()
                                         .logGroup(LogGroup.Builder.create(this, "Service01LogGroup")
