@@ -40,7 +40,7 @@ public class RdsStack extends Stack {
                 .allocatedStorage(20)
                 .securityGroups(Collections.singletonList(iSecurityGroup))
                 .vpcSubnets(SubnetSelection.builder()
-                        .subnets(vpc.getPrivateSubnets())
+                        .subnets(vpc.getPublicSubnets())
                         .build())
                 .build();
 
