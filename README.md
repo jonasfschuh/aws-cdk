@@ -30,7 +30,7 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 ## Diagram
 
 Architecture diagram
-![](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/AWS%20CDK_v2.png?raw=true&sanitize=true)
+![](https://github.com/jonasfschuh/aws-cdk/blob/master/docs/img/AWS%20CDK.png?raw=true&sanitize=true)
 
 ## Installation
 
