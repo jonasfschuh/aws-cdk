@@ -32,5 +32,4 @@ public class SnsStack extends Stack {
     public SnsTopic getProductEventsTopic() {
         return productEventsTopic;
     }
-
 }
